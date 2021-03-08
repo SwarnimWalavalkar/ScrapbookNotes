@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addNoteToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <EditText
+        android:id="@+id/titleEditor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif"
+        android:hint="Note Title"
+        android:paddingStart="30dp"
+        android:textSize="18sp" />
+
+    <net.dankito.richtexteditor.android.RichTextEditor
+        android:id="@+id/editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        />
+
+    <net.dankito.richtexteditor.android.toolbar.AllCommandsEditorToolbar
+        android:id="@+id/editorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/colorPrimary"
+        />
+
+</LinearLayout>
